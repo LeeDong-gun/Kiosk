@@ -14,7 +14,7 @@ public class Kiosk {
         int menuChoice;
 
         //리스트 선언
-        List<lv3.MenuItem> menuItems = new ArrayList<>();
+        List<MenuItem> menuItems = new ArrayList<>();
 
         //햄버거(메뉴리스트) 객체 추가
         menuItems.add(new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
