@@ -16,7 +16,7 @@ public class Kiosk {
         //리스트 선언
         List<lv3.MenuItem> menuItems = new ArrayList<>();
 
-        //햄버거 객체 추가
+        //햄버거(메뉴리스트) 객체 추가
         menuItems.add(new lv3.MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
         menuItems.add(new lv3.MenuItem("SmokeShack", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"));
         menuItems.add(new lv3.MenuItem("CheeseBurger", 6.9, "포테이토 번과 비프패티, 치즈가 토핑된 치즈버거"));
