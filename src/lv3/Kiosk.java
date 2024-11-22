@@ -75,6 +75,7 @@ public class Kiosk {
                     break;
                 default:
                     System.out.println("없는 메뉴 입니다, 다시 선택해주세요.");
+                    continue;
             }
             System.out.println();
         } while (menuChoice != 0);
