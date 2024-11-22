@@ -1,5 +1,6 @@
-package lv2;
+package lv3;
 
+// 햄버거 메뉴
 public class MenuItem {
     public String burgerName;
     public double price;
