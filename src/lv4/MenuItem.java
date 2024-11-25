@@ -11,4 +11,5 @@ public class MenuItem {
         this.price = price;
         this.comment = comment;
     }
+
 }
