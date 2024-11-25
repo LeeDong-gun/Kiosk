@@ -52,10 +52,17 @@ public class Kiosk {
             if (inputChoice == 0) {
                 System.out.println("키오스크를 종료합니다.");
                 break;
+            } else if (inputChoice == 4 && !cart.isEmpty()) {
+                // 장바구니 결제 문구 (메뉴들이 합쳐진 값 메서드)
+                continue;
+            } else if (inputChoice == 5 && !cart.isEmpty()) {
+                // 장바구니 클리어 메서드
+                continue;
             } else if (inputChoice < 1 || inputChoice > menu.size()) {
                 System.out.println("유효하지 않은 숫자입니다. 다시 입력해주세요");
                 continue;
             }
+
             MenuType select = menu.get(inputChoice - 1);
             System.out.println(select.getName() + " 선택창으로 넘어갑니다.");
 
@@ -76,19 +83,14 @@ public class Kiosk {
 
                 MenuItem selectMenu = null;
                 //뒤로가기
-                switch (menuChoice) {
-                    case 1:
-                        selectMenu = menu.get(0).getMenuList().get(menuChoice - 1);
-                        break;
-                    case 2:
-                        selectMenu = menu.get(1).getMenuList().get(menuChoice - 1);
-                        break;
-                    case 3:
-                        selectMenu = menu.get(2).getMenuList().get(menuChoice - 1);
-                        break;
-                    default:
-                        System.out.println("유효하지 않은 숫자입니다. 다시 선택해주세요");
-                        continue;
+                if (menuChoice == 0) {
+                    System.out.println("메인 메뉴로 들아갑니다.");
+                    continue;
+                } else if (menuChoice > 0 && menuChoice <= select.getMenuList().size()) {
+                    selectMenu = select.getMenuList().get(menuChoice - 1);
+                } else {
+                    System.out.println("유효하지 않는 번호입니다. 다시 선택해주세요");
+                    continue;
                 }
                 System.out.println("선택한 메뉴: " + selectMenu.getName() + "  | W " + selectMenu.getPrice() + " | " + selectMenu.getComment());
                 System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
@@ -101,12 +103,13 @@ public class Kiosk {
                 switch (choice) {
                     case 1:
                         cart.add(selectMenu);
-                        System.out.println(select.getName() + "이(가) 장바구니에 추가되었습니다.");
+                        System.out.println(selectMenu.getName() + "이(가) 장바구니에 추가되었습니다.");
                     case 2:
                         System.out.println("다시 메뉴로 돌아갑니다.");
-                        continue;
                 }
             } while (false);
+
+
         } while (inputChoice != 0);
     }
 }
