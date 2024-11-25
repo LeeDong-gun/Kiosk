@@ -10,7 +10,6 @@ public class MenuType {
     private String name;
     private List<MenuItem> menuList;
 
-
     // 생성자
     public MenuType(String name) {
         this.name = name;
@@ -58,9 +57,10 @@ public class MenuType {
                 continue;
             }
 
+
             MenuItem selectMenu = menuList.get(menuChoice - 1);
             System.out.println("선택한 메뉴: " + selectMenu.getName() + "  | W " + selectMenu.getPrice() + " | " + selectMenu.getComment());
-            System.out.println();
+
         } while (false);
     }
 

@@ -19,6 +19,7 @@ public class Kiosk {
         int inputChoice = 0;
 
         do {
+            // 메인 메뉴 출력
             System.out.println("[ MAIN MENU ]");
 
             // 카테고리 출력
