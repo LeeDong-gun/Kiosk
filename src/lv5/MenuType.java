@@ -21,6 +21,7 @@ public class MenuType {
         menuList.add(item);
     }
 
+    // 메뉴 타입 이름 불러오기
     public String getName() {
         return name;
     }
@@ -63,6 +64,4 @@ public class MenuType {
 
         } while (false);
     }
-
-
 }

@@ -5,14 +5,17 @@ public class MenuItem {
     private double price;
     private String comment;
 
+    // 이름 불러오기
     public String getName() {
         return name;
     }
 
+    // 가격 불러오기
     public double getPrice() {
         return price;
     }
 
+    // 코멘트 불러오기
     public String getComment() {
         return comment;
     }
